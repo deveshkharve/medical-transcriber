@@ -1,0 +1,27 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+.env
+
+# Audio files
+audio/
+
+# Transcripts
+/storage/transcripts/
+
+# SOAP notes
+/storage/soap_notes/
+
+# Audio files
+/storage/audio/
+
+# Logs
+logs/
+

@@ -1,0 +1,24 @@
+[project]
+name = "ai-clinic-transcriber"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "ffmpeg>=1.4",
+    "ffmpeg-python>=0.2.0",
+    "flask>=3.1.0",
+    "flask-cors>=5.0.1",
+    "google-cloud-speech>=2.32.0",
+    "google-generativeai>=0.8.5",
+    "litellm>=1.69.0",
+    "numpy>=2.2.5",
+    "openai-whisper",
+    "pyannote-audio>=3.3.2",
+    "pydub>=0.25.1",
+    "python-dotenv>=1.1.0",
+    "resemblyzer>=0.1.4",
+]
+
+[tool.uv.sources]
+openai-whisper = { git = "https://github.com/openai/whisper.git" }
