@@ -83,7 +83,7 @@ def generate_transcript_data(audio_file):
 
     logger.info(f"Transcribing audio file: {audio_file}")
 
-    audio_file = clear_audio_files(audio_file)
+    # audio_file = clear_audio_files(audio_file)
     transcript_data = assembly_transcribe(audio_file)
 
     filename = get_file_name(audio_file)
