@@ -60,6 +60,7 @@ const Index = () => {
             transcript={transcript}
             soapNotes={soapNotes}
             isProcessing={isProcessing}
+            labels={labels}
           />
         </div>
       </main>

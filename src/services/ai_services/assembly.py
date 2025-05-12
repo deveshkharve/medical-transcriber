@@ -7,7 +7,7 @@ import requests
 from src.config.constants import AUDIO_DIR, TRANSCRIPT_DIR
 from src.utils.file import check_file_exists, get_file_name, load_file, store_file
 from src.utils.logger import dump_to_file, logger
-from src.utils.audio import convert_to_mp3, convert_to_wav
+from src.utils.audio import clear_audio_files, convert_to_mp3, convert_to_wav
 
 
 def upload_audio(file_path, api_key):
@@ -83,6 +83,7 @@ def generate_transcript_data(audio_file):
 
     logger.info(f"Transcribing audio file: {audio_file}")
 
+    audio_file = clear_audio_files(audio_file)
     transcript_data = assembly_transcribe(audio_file)
 
     filename = get_file_name(audio_file)

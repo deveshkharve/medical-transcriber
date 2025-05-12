@@ -54,6 +54,7 @@ const TranscriptViewer = ({
   transcript,
   soapNotes,
   isProcessing,
+  labels,
 }) => {
   const [highlightedId, setHighlightedId] = useState(null);
 
@@ -137,6 +138,7 @@ const TranscriptViewer = ({
                   <TranscriptListViewer
                     transcript={transcript}
                     highlightedId={highlightedId}
+                    labels={labels}
                   />
                 ) : (
                   <Typography color="text.secondary">

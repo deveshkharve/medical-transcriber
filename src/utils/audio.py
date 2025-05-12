@@ -24,3 +24,12 @@ def convert_to_mp3(input_path, output_file_name, dir):
     except ffmpeg.Error as e:
         print("FFmpeg error:", e.stderr.decode())
         raise
+
+
+def clear_audio_files(file_path):
+    # removes silence from the audio file
+    stream = ffmpeg.input(file_path)
+    stream = ffmpeg.output(
+        stream, file_path, filter="silencedetect=n=-50dB:d=0.5")
+    ffmpeg.run(stream, overwrite_output=True, quiet=True)
+    return file_path

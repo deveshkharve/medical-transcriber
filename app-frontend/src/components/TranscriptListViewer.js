@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 
-const TranscriptListViewer = ({ transcript, highlightedId }) => {
+const TranscriptListViewer = ({ transcript, highlightedId, labels }) => {
   const containerRef = useRef(null);
 
   useEffect(() => {
@@ -77,7 +77,11 @@ const TranscriptListViewer = ({ transcript, highlightedId }) => {
           key={index}
           style={defaultStyle}
         >
-          <b>Speaker: {utterance.speaker}</b>: {utterance.text}
+          <b>
+            {labels[`speaker_${utterance.speaker}`] ||
+              `Speaker_${utterance.speaker}`}
+          </b>
+          : {utterance.text}
         </div>
       ))}
     </div>

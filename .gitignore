@@ -10,18 +10,9 @@ wheels/
 .venv
 .env
 
-# Audio files
-audio/
-
-# Transcripts
-/storage/transcripts/
-
-# SOAP notes
-/storage/soap_notes/
-
-# Audio files
-/storage/audio/
+# Storage
+storage/
 
 # Logs
 logs/
-
+*.log
